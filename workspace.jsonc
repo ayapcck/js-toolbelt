@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "my-scope"
+    "defaultScope": "utility"
   },
   /**
    * main configuration for component dependency resolution.
@@ -57,7 +57,7 @@
       /**
        * uncomment to apply the chosen environment on all components.
        **/
-      // "teambit.react/react": { }
+      "teambit.harmony/node": {}
     }
   }
 }
