@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "ayapapaya.utility"
+    "defaultScope": "ayapapaya.pure"
   },
   /**
    * main configuration for component dependency resolution.
