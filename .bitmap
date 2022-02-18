@@ -9,5 +9,11 @@
  */
 
 {
+    "swap": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "utility/swap"
+    },
     "$schema-version": "14.9.0"
 }
