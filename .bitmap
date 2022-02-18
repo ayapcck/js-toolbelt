@@ -10,10 +10,10 @@
 
 {
     "swap": {
-        "scope": "ayapapaya.utility",
-        "version": "1.0.0",
+        "scope": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "utility/swap"
+        "rootDir": "pure/swap"
     },
     "$schema-version": "14.9.0"
 }
