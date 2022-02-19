@@ -1,8 +1,21 @@
-export function swap(i: number, j: number, arr: any[]) {
-  if (i >= arr.length) throw new Error(`${i} does not correspond to an index in arr`);
-  if (j >= arr.length) throw new Error(`${j} does not correspond to an index in arr`);
+const errorMsg = (index: number) => new Error(`${index} is not a valid index in input`);
 
-	let temp = arr[i];
-	arr[i] = arr[j];
-	arr[j] = temp;
+/**
+ * 
+ * @param i first index
+ * @param j second index
+ * @param input input to swap elements in
+ * @returns array with desired elements swapped
+ */
+export function swap(i: number, j: number, input: any[]) {
+    if (i >= input.length) throw errorMsg(i);
+    if (j >= input.length) throw errorMsg(j);
+
+    let arr = [ ...input ];
+
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+
+    return arr;
 }
