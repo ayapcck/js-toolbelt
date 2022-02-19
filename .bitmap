@@ -9,6 +9,12 @@
  */
 
 {
+    "count": {
+        "scope": "ayapapaya.pure",
+        "version": "0.1.1",
+        "mainFile": "index.ts",
+        "rootDir": "pure/count"
+    },
     "swap": {
         "scope": "ayapapaya.pure",
         "version": "0.1.1",
