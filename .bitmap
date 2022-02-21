@@ -21,6 +21,12 @@
         "mainFile": "index.ts",
         "rootDir": "pure/count"
     },
+    "index-map": {
+        "scope": "ayapapaya.pure",
+        "version": "0.1.0",
+        "mainFile": "index.ts",
+        "rootDir": "pure/index-map"
+    },
     "swap": {
         "scope": "ayapapaya.pure",
         "version": "0.1.1",
