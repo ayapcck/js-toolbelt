@@ -1,9 +1,8 @@
+interface Options {
+  findSmallestGTTarget?: boolean;
+};
+
 /**
- * 
- * @param iterable 
- * @param target 
- * @param start 
- * @param end 
  * @returns index of target in iterable or -1 if not found
  */
 export function binarySearch(
@@ -11,16 +10,19 @@ export function binarySearch(
     target: number,
     start: number = 0,
     end: number = null,
+    options: Options = {},
   ) {
-    // Setup
+	  // Handles case where binarySearch is called without an end integer (initial call)
   	if (end === null) {
-      // Handles case where binarySearch is called without an end integer (initial call)
-  		end = iterable.length - 1;
+	  	end = iterable.length - 1;
   	}
 
-    // Base Cases
-	if (start === end) return iterable[start] === target ? start : -1;
-  	if (start > end) return -1;
+    // Base Case
+  	if (start >= end) {
+      const { findSmallestGTTarget = false } = options;
+      if (findSmallestGTTarget) return getIndexOfFirstGTTarget(iterable, target, start);
+      else return getIndexOfTarget(iterable, target, start);
+  	}
 
   	// Recursive step
   	const middle = Math.floor((start + end) / 2);
@@ -33,5 +35,17 @@ export function binarySearch(
   	}
 
   	// Recursive call
-  	return binarySearch(iterable, target, start, end);
+  	return binarySearch(iterable, target, start, end, options);
 };
+
+const getIndexOfFirstGTTarget = (iterable: number[], target: number, start: number) => (
+  target > iterable[start]
+    ? start + 1
+    : start
+);
+
+const getIndexOfTarget = (iterable: number[], target: number, start: number) => (
+  iterable[start] === target
+    ? start
+    : -1
+);
