@@ -1,0 +1,1 @@
+export { subsequence } from './subsequence';

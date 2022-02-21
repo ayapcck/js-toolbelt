@@ -27,6 +27,12 @@
         "mainFile": "index.ts",
         "rootDir": "pure/index-map"
     },
+    "subsequence": {
+        "scope": "ayapapaya.pure",
+        "version": "0.1.0",
+        "mainFile": "index.ts",
+        "rootDir": "pure/subsequence"
+    },
     "swap": {
         "scope": "ayapapaya.pure",
         "version": "0.1.1",
