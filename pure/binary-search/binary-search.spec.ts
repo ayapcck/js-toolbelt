@@ -10,7 +10,7 @@ InputGenerator.getOddArray = function() {
   return [ 1, 2, 5, 12, 19, 32, 46, 67, 83, 100, 123 ];
 }
 
-describe('Even Length Arrays', () => {
+describe('Even Length', () => {
   describe('Return Value', () => {
     it('should be correct for first element', () => {
       const testData = InputGenerator.getEvenArray();
@@ -30,9 +30,17 @@ describe('Even Length Arrays', () => {
       const lastValue = testData[lastIndex];
       expect(binarySearch(testData, lastValue, 0)).toBe(lastIndex);
     });
+    it('should be correct for large element not in list', () => {
+      const testData = InputGenerator.getEvenArray();
+      expect(binarySearch(testData, 1000, 0)).toBe(-1);
+    });
+    it('should be correct for small element not in list', () => {
+      const testData = InputGenerator.getEvenArray();
+      expect(binarySearch(testData, -1, 0)).toBe(-1);
+    });
   });
 });
-describe('Odd Length Arrays', () => {
+describe('Odd Length', () => {
   describe('Return Value', () => {
     it('should be correct for first element', () => {
       const testData = InputGenerator.getOddArray();
@@ -50,6 +58,14 @@ describe('Odd Length Arrays', () => {
       const lastIndex = testData.length - 1;
       const lastValue = testData[lastIndex];
       expect(binarySearch(testData, lastValue, 0)).toBe(lastIndex);
+    });
+    it('should be correct for large element not in list', () => {
+      const testData = InputGenerator.getOddArray();
+      expect(binarySearch(testData, 1000, 0)).toBe(-1);
+    });
+    it('should be correct for small element not in list', () => {
+      const testData = InputGenerator.getOddArray();
+      expect(binarySearch(testData, -1, 0)).toBe(-1);
     });
   });
 });
