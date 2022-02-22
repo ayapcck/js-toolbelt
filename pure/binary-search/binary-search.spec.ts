@@ -29,18 +29,13 @@ for (let [arrayParity, parityFunc] of ARRAY_TYPES) {
         const lastValue = testData[lastIndex];
         expect(binarySearch(testData, lastValue, 0)).toBe(lastIndex);
       });
-      it('should be correct for large element not in list', () => {
+      it('should be correct when target is larger than elements in list', () => {
         const testData = InputGenerator[parityFunc]();
         expect(binarySearch(testData, 1000, 0)).toBe(-1);
       });
-      it('should be correct when small target not in list', () => {
+      it('should be correct when target is smaller than elements in list', () => {
         const testData = InputGenerator[parityFunc]();
         expect(binarySearch(testData, -1, 0)).toBe(-1);
-      });
-      it('should be correct when searching for smallest value larger than target', () => {
-        const testData = InputGenerator.getEvenArray();
-        expect(binarySearch(testData, 18, 0, null, { findSmallestGTTarget: true })).toBe(4);
-        expect(binarySearch(testData, 13, 0, null, { findSmallestGTTarget: true })).toBe(4);
       });
     });
   });
