@@ -9,6 +9,12 @@
  */
 
 {
+    "binary-recursion": {
+        "scope": "ayapapaya.pure",
+        "version": "0.1.0",
+        "mainFile": "index.ts",
+        "rootDir": "pure/binary-recursion"
+    },
     "binary-search": {
         "scope": "ayapapaya.pure",
         "version": "0.1.4",
