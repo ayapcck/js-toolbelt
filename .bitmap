@@ -33,6 +33,12 @@
         "mainFile": "index.ts",
         "rootDir": "pure/index-map"
     },
+    "smallest-gt-target": {
+        "scope": "ayapapaya.pure",
+        "version": "0.1.0",
+        "mainFile": "index.ts",
+        "rootDir": "pure/smallest-gt-target"
+    },
     "subsequence": {
         "scope": "ayapapaya.pure",
         "version": "0.1.0",
