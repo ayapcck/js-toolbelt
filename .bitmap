@@ -9,6 +9,12 @@
  */
 
 {
+    "array-plus": {
+        "scope": "ayapapaya.uber-array",
+        "version": "0.1.0",
+        "mainFile": "index.ts",
+        "rootDir": "uber-array/array-plus"
+    },
     "binary-recursion": {
         "scope": "ayapapaya.pure",
         "version": "0.1.0",
